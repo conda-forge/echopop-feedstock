@@ -1,5 +1,5 @@
 {% set name = "echopop" %}
-{% set version = "0.4.1" %}
+{% set version = "0.4.2" %}
 
 package:
   name: echopop
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/echopop-{{ version }}.tar.gz
-  sha256: 1efd419e852945fc723eded1a44911f8537bbaecf330a57630beb4d39c3089d7
+  sha256: 96322a4fafeeb836534fa2a8bd9edad7287c1e5bfb3982fa09525ce1c1c154f0
 
 build:
   noarch: python
@@ -23,20 +23,30 @@ requirements:
     - wheel >=0.29.0
     - pip
   run:
-    - geopandas
-    - geopy
-    - ipympl
-    - ipywidgets
-    - jupyter_contrib_nbextensions
+    - python >=3.9
     - lmfit
     - numpy
+    - openpyxl
     - pandas
+    - scipy
+    - cartopy
+    - geopandas
+    - geopy
+    - pyproj
+    - shapely
+    - verde
+    - bokeh
+    - geoviews
+    - holoviews
+    - ipympl
+    - ipywidgets
+    - jupyter_bokeh >=3.0.5
+    - jupyter_contrib_nbextensions
+    - matplotlib
+    - panel
+    - traitlets
     - pandera
     - pydantic
-    - python >=3.9
-    - scipy
-    - shapely
-    - traitlets
 
 test:
   imports:
