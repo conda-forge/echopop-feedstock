@@ -12,18 +12,18 @@ source:
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=48
     - setuptools-scm >=4,<6
     - setuptools_scm_git_archive
     - wheel >=0.29.0
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - lmfit
     - numpy
     - openpyxl
@@ -55,6 +55,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/OSOceanAcoustics/echopop
