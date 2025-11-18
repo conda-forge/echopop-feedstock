@@ -24,29 +24,29 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
-    - lmfit
-    - numpy
-    - openpyxl
-    - pandas
-    - scipy
+    - awkward
+    - bokeh
     - cartopy
     - geopandas
     - geopy
-    - pyproj
-    - shapely
-    - verde
-    - bokeh
     - geoviews
     - holoviews
     - ipympl
     - ipywidgets
+    - matplotlib-base
     - jupyter_bokeh >=3.0.5
-    - jupyter_contrib_nbextensions
-    - matplotlib
-    - panel
+    - lmfit
+    - numba
+    - numpy
+    - openpyxl
+    - pandas
+    - pandera>=0.25
+    - pydantic>=2.0.0
+    - pyproj
+    - scipy
+    - shapely
     - traitlets
-    - pandera
-    - pydantic
+    - verde
 
 test:
   imports:
