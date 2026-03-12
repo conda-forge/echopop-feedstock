@@ -1,5 +1,5 @@
 {% set name = "echopop" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: echopop
@@ -31,22 +31,26 @@ requirements:
     - geopy
     - geoviews
     - holoviews
+    - hvplot
     - ipympl
     - ipywidgets
     - matplotlib-base
     - jupyter_bokeh >=3.0.5
     - lmfit
-    - numba
+    - numba >=0.63.0b1
     - numpy
     - openpyxl
     - pandas
-    - pandera>=0.25
-    - pydantic>=2.0.0
+    - pandera >=0.25
+    - pyarrow
+    - pydantic >=2.0.0
     - pyproj
     - scipy
+    - seaborn
     - shapely
     - traitlets
     - verde
+    - xarray >=2026.01.0
 
 test:
   imports:
