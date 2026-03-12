@@ -1,5 +1,5 @@
 {% set name = "echopop" %}
-{% set version = "0.5.0" %}
+{% set version = "0.6.0" %}
 
 package:
   name: echopop
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/echopop-{{ version }}.tar.gz
-  sha256: c3dbc453da300c0e3c668a7f071dde37d8435639cb35e911ceacb0894ef3de9d
+  sha256: d976d22e31093f840cecb533c34242be1ac503c12124379ded72f6552c0a707e
 
 build:
   noarch: python
