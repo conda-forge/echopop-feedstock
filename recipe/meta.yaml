@@ -1,5 +1,5 @@
 {% set name = "echopop" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 {% set python_min = "3.12" %}
 
 package:
@@ -7,21 +7,21 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/echopop-{{ version }}.tar.gz
-  sha256: d976d22e31093f840cecb533c34242be1ac503c12124379ded72f6552c0a707e
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/echopop-{{ version }}.tar.gz
+  sha256: f02ef28616b268fa605a086ff51c7f94abe4253a0198f507876b9d279447d18c
 
 build:
   noarch: python
-  script: 
+  script:
     - export SETUPTOOLS_SCM_PRETEND_VERSION={{ version }}
     - {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 1
+  number: 0
 
 requirements:
   host:
     - python {{ python_min }}
     - setuptools >=61
-    - setuptools-scm >=8 
+    - setuptools-scm >=8
     - wheel >=0.29.0
     - pip
   run:
